@@ -1,10 +1,11 @@
 import { Configuration, OpenAIApi } from "openai";
 import readline from 'readline';
-
+import dotenv from 'dotenv';
+dotenv.config()
 // Configuration for Open AI
 const configuration = new Configuration({
-    organization: "org-ZhV4x8aQND5EDQTdTZw6pKql",
-    apiKey: "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"
+    organization: process.env.OPENAI_ORGANIZATION,
+    apiKey: process.env.OPENAI_API_KEY
 })
 
 const openai = new OpenAIApi(configuration)
