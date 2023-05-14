@@ -36,3 +36,7 @@ app.post('/', async (request, response) => {
     })
     response.json(result.data.choices[0].message)
 })
+
+app.get('/test', async (req, res) => {
+    res.send('this is test route')
+})
