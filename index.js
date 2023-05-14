@@ -34,6 +34,7 @@ app.post('/', async (request, response) => {
             ...chats,
         ]
     })
+    response.setHeader("Access-Control-Allow-Headers", "Content-Type, Access-Control-Allow-Headers, Access-Control-Allow-Origin")
     response.json(result.data.choices[0].message)
 })
 
