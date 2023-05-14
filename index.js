@@ -20,7 +20,7 @@ app.use(bodyParser.json());
 app.use(cors());
 
 app.listen(port, ()=> {
-    console.log(`listening on port ${port}`)
+    console.log(`listening on port ${port}`);
 })
 
 app.post('/', async (request, response) => {
